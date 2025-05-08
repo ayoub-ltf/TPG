@@ -1,38 +1,34 @@
-import javax.crypto.spec.PSource;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
 
 public class TestLignes {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        HashMap<String, String> hm = new HashMap<>();
-        hm.put("prenom", "Jaqcue");
-        hm.put("nom", "Truc");
+        GestionTPG gtp = new GestionTPG();
 
+        System.out.println(gtp);
 
-        hm.put("prenom", "Jacques");
+        System.out.println("--------------QUESTION 2 ---------------------");
+        gtp.affichageNbreBus(); // Affichage nombre de bus et trolley
 
-        for (String k : hm.keySet()) {
-            System.out.println(k + " : " + hm.get(k));
-        }
+        System.out.println("--------------QUESTION 3 ---------------------");
+        gtp.afficherSommeAchat();
 
-        System.out.println(hm.values());
+        System.out.println("--------------QUESTION 5 ---------------------");
+        gtp.affichagePlusde300000();
+
+        System.out.println("--------------QUESTION 6 ---------------------");
+        gtp.afficherVehiculeMin();
+
+        System.out.println("--------------QUESTION 7 ---------------------");
+        gtp.afficherCoutEntretien();
+        System.out.println("--------------partie 2 ---------------------");
+        gtp.afficherCoutAnnuelEntretient();
+
 
     }
-
-
-
-
-
-
 
 
 
